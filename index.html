@@ -17,6 +17,11 @@
         background: rgb(255, 255, 255) no-repeat fixed top left;
         font-family: "Inter", 'Open Sans', sans-serif;
       }
+        hr {
+    border: 0;
+    opacity: 0.13;
+    border-top: 2px  solid #000000;
+  }
     </style>
   </head>
 
@@ -37,7 +42,7 @@
             <h6>
               <a class="a2" href="https://github.com/wangzivector">Xianli Wang</a><sup>1</sup>&nbsp; &nbsp;
               <a class="a2" href="https://scholar.google.com/citations?user=EhHaS1YAAAAJ">Zehao Wu</a><sup>1</sup>&nbsp; &nbsp;
-              <a class="a2" href="mailto:qsxu@um.edu.mo">Qingsong Xu</a><sup>1†</sup>&nbsp; &nbsp;
+              <a class="a2" href="https://scholar.google.com/citations?user=6T8qsVgAAAAJ">Qingsong Xu</a><sup>1†</sup>&nbsp; &nbsp;
               <br><br>
               <p>
                 <sup>1</sup>University of Macau &nbsp; &nbsp; 
@@ -70,14 +75,13 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <hr style="margin-top:0px">
           <div class="row justify-content-center" style="align-items:center; display:flex;">
             <img src="images/system@3x-80.jpg" alt="OptTac teaser" class="img-responsive graph" width="100%"/>
             <br>
           </div>
 
           <p class="text-justify">
-            <b>OptTac</b> is a compact, reproducible, integration-friendly optoelectronic tactile sensing system
+            <b>OptTac</b>: a compact, reproducible, integration-friendly optoelectronic tactile sensing system
             for measuring distributed three-dimensional deformation, triaxial forces, and axial torque.
             <!-- Built from arrays of opposing light-emitting diodes (LEDs) and photodiodes (PDs) embedded -->
             <!-- in a flexible elastomer substrate, OptTac reconstructs surface deformation from optical -->
@@ -118,125 +122,143 @@
       </div>
     </div>
   </section>
-  <br>
 
-   <!--
+  
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <h2><strong>Methods</strong></h2>
+        <div class="col-12" style="margin-top:40px">
+          <h2><strong>Developed devices</strong></h2>
           <hr style="margin-top:0px">
 
-          <h3 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>Overview</b></h3>
+          <h4 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>1. Contact-rich universal manipulation interface</b></h4>
           <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/opttac_overview.jpg" alt="OptTac overview" class="img-responsive graph" width="95%"/>
+            <img src="images/opttac_glove.png" alt="OptTac overview" class="img-responsive graph" width="85%"/>
+          </div>
+          <p class="text-justify" style="margin-bottom:0px;" >
+            <b>UMI</b>: Three primary hand fingers are equipped with OptPads controlled by the Exci-Meas module which is integrated into the marker cube of the visual fiducial system. The thumb is articulated by four-degree-of-freedom angular encoders, while each of two affiliated fingers is kinetically encoded by three joints.
+          </p>
+    
+          <hr style="opacity: 0.4; border: 0; border-top: 2px  dashed #cdcbcf; width: 65%; margin-top:30px; margin-bottom:30px">
+
+          <h4 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>2. OptTac-intergrated robotic hands</b></h4>
+          <div class="row justify-content-center" style="align-items:center; display:flex;">
+            <img src="images/multihands.png" alt="OptTac overview" class="img-responsive graph" width="85%"/>
           </div>
           <p class="text-justify">
-            <b>Overview.</b> OptTac is built from arrays of opposing LEDs and PDs embedded within a
-            flexible elastomer substrate. Each optoelectronic taxel modulates photodiode readings via
-            mechanical-deformation-driven relative displacements between paired LEDs and PDs.
-            Controlled light excitation and numerical computation reconstruct three-dimensional deformation,
-            triaxial force, and axial torque across the sensing surface.
+            <b>Robotiq-2F</b>: Owing to the flexible, compact design of OptPads, our tactile sensing kit can immediately endow common robotic manipulators with modality-rich sensation without modifying existing mechanisms. The small sensor thickness also considerably retains the available opening range for robotic manipulation.
           </p>
-
-          <h3 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>Optoelectronic Taxel Design</b></h3>
-          <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/opttac_taxel.jpg" alt="OptTac taxel design" class="img-responsive graph" width="85%"/>
-          </div>
           <p class="text-justify">
-            <b>Optoelectronic Taxel Design.</b> Instead of deploying dedicated taxels for mechanically
-            decoupled axes, OptTac leverages neighboring PDs under modulated optical excitation to
-            localize individual LEDs. This strategy improves taxel utilization relative to prior
-            axis-decoupled designs and enables multi-axis sensing per LED-PD pair.
+            <b>Robotiq-3F</b>: to update.
           </p>
-
-          <h3 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>Fabrication</b></h3>
-          <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/opttac_fabrication.jpg" alt="OptTac fabrication" class="img-responsive graph" width="85%"/>
-          </div>
-          <p class="text-justify">
-            <b>Fabrication.</b> The taxel grid is assembled from off-the-shelf components on flexible
-            printed-circuit boards (FPCBs). Fabrication is streamlined into two accessible steps:
-            commercial FPCB manufacturing and standard elastomer casting. This removes requirements
-            for specialized hardware such as pulse magnetizers or precision fiber-alignment setups.
+          <p class="text-justify" style="margin-bottom:10px;" >
+            <b>LEAP Hand</b>: Seamless integration of OptTac onto the intricate 16-degree-of-freedom LEAP Hand. Additional OptPads can be feasibly installed on the finger pads and the palm of the hand, if required.
           </p>
-
-          <h3 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>Signal Processing, Learning, and Software</b></h3>
-          <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/opttac_software.jpg" alt="OptTac software" class="img-responsive graph" width="85%"/>
-          </div>
-          <p class="text-justify">
-            <b>Signal Processing and Learning.</b> OptTac recovers surface deformation via numerical
-            optimization of measured light-intensity distributions, then deploys a lightweight neural
-            network to estimate triaxial contact forces and axial torque. We further implement a full
-            software stack supporting data acquisition, tactile-modality computation, and multimodal
-            visualization.
-          </p>
-
-          <h3 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>System Integration</b></h3>
-          <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/opttac_integration.jpg" alt="OptTac integration" class="img-responsive graph" width="85%"/>
-          </div>
-          <p class="text-justify">
-            <b>System Integration.</b> Boasting a 3.0 mm thickness and plug-and-extend modular design,
-            OptTac is compatible with multi-hand setups and a custom exoskeleton sensing kit. This
-            supports integration-friendly tactile sensing for broad contact-aware robotic applications.
-          </p>
-
-          <br>
         </div>
       </div>
     </div>
   </section>
-  <br>
-  <br>
 
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12" style="margin-top:40px">
           <h2><strong>Results</strong></h2>
           <hr style="margin-top:0px">
 
-          <h3 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>Performance</b></h3>
-          <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/opttac_performance.jpg" alt="OptTac performance" class="img-responsive graph" width="85%"/>
+          <h4 style="margin-top:40px; margin-bottom:20px; color:#717980;"><b>1. Manipulation wrench capture - precise circuit assembly</b></h4>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="row justify-content-center" style="align-items:center; display:flex;">
+                <div class="embed-responsive embed-responsive-16by9" style="width:96.4%;">
+                  <iframe class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/oR70jKRHExA"
+                          title="OptTac Video"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen>
+                  </iframe>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <div class="row justify-content-center" style="align-items:center; display:flex; margin-top:30px;">
+          <img src="images/mani-assembly.png" alt="OptTac performance" class="img-responsive graph" width="85%"/>
+        </div>
+        <p class="text-justify">
+        The OptTac UMI is validated in a sequential assembly task, including plugging various portable physical interfaces.
+        </p>
+
+    <hr style="opacity: 0.4; border: 0; border-top: 2px  dashed #cdcbcf; width: 65%; margin-top:30px; margin-bottom:50px">
+    <h4 style="margin-top:40px; margin-bottom:30px; color:#717980;"><b>2. Manipulation wrench capture - dexterous chemistry experiment</b></h4>
+  
+    <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="row justify-content-center" style="align-items:center; display:flex;">
+                <div class="embed-responsive embed-responsive-16by9" style="width:96.4%;">
+                  <iframe class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/GqOubzUXGYM"
+                          title="OptTac Video"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen>
+                  </iframe>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+          <div class="row justify-content-center" style="align-items:center; display:flex; margin-top:30px;">
+            <img src="images/mani-chemistry.png" alt="OptTac performance" class="img-responsive graph" width="85%"/>
           </div>
           <p class="text-justify">
-            <b>Performance.</b> The 24 × 24 mm sensing pad achieves full-scale mean absolute errors
-            of 1.2%, 1.7%, and 2.4% for normal force, shear force, and axial torque, respectively.
-            OptTac provides multimodal triaxial perception with performance competitive against
-            established tactile sensors.
+           Further dexterous experimental operations containing screwing, squeezing, and insertion further demonstrate that the UMI robustly captured continuous contact paths and six-axis wrench exertion on targeted objects, highlighting the sensing versatility of the OptTac UMI in dexterous manipulation tasks.
           </p>
 
-          <h3 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>Demonstrations</b></h3>
-          <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/opttac_demo.gif" alt="OptTac demonstrations" class="img-responsive graph" width="85%"/>
+    <hr style="opacity: 0.4; border: 0; border-top: 2px  dashed #cdcbcf; width: 65%; margin-top:50px; margin-bottom:30px">
+    <h4 style="margin-top:40px; margin-bottom:30px; color:#717980;"><b>3. Force-feedback autonomous teleoperation</b></h4>
+
+    <section> 
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="row justify-content-center" style="align-items:center; display:flex;">
+                <div class="embed-responsive embed-responsive-16by9" style="width:96.4%;">
+                  <iframe class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/YmNB7y2aivQ"
+                          title="OptTac Video"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen>
+                  </iframe>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+          <div class="row justify-content-center" style="align-items:center; display:flex; margin-top:30px;">
+            <img src="images/tele-example.png" alt="OptTac performance" class="img-responsive graph" width="85%"/>
           </div>
           <p class="text-justify">
-            <b>Demonstrations.</b> We validate OptTac for multimodal manipulation-skill data collection
-            and wrench-guided autonomous teleoperation using a custom sensorized exoskeleton interface.
-            The system also supports in-hand contact monitoring for circuit-assembly and chemistry
-            workflows.
+          Flexible integration of OptTac into the master UMI and slave manipulator enables force-feedback autonomous teleoperation. Two OptTac kits seamlessly functioned and simultaneously monitored the manipulation hardware in both master and slave sides. 
           </p>
 
-          <h3 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>Open Source</b></h3>
-          <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/opttac_opensource.jpg" alt="OptTac open source" class="img-responsive graph" width="85%"/>
-          </div>
-          <p class="text-justify">
-            <b>Open Source.</b> We fully open-source fabrication protocols and software to accelerate
-            the development of contact-aware robotic manipulation.
-          </p>
         </div>
       </div>
     </div>
   </section>
-  <br>
- -->
-  <!-- citing -->
-  <div class="container">
+
+  <!-- cite -->
+  <div class="container"  style="margin-top:20px">
     <div class="row">
       <div class="col-12">
         <h2><strong>Citation</strong></h2>
@@ -278,7 +300,7 @@
     </div>
   </div>
 
-  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+  <footer class="text-center" style="margin-bottom:10px; font-size: small;">
     <hr>
     Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the
     <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
