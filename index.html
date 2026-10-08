@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OptTac: Reproducible Optoelectronic Tactile Sensing</title>
+    <title>OptTac</title>
 
     <!-- Bootstrap -->
     <link rel="preconnect" href="https://rsms.me/">
@@ -26,7 +26,7 @@
   </head>
   <script type="module" src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.css" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <body>
   <!-- cover -->
   <section>
@@ -34,11 +34,11 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col"> 
+            <h3 style="color:#bb070780;"> <em>(Under construction)</em></h3>
             <h2 style="font-size:30px;">
               <b><ins>OptTac</ins></b>: Reproducible <b>Opt</b>oelectronic <b>Tac</b>tile Sensing <br>of Distributed Triaxial Deformation, Force, and Torque for Robotic Manipulation
             </h2>
 
-            <h4 style="color:#bb0707;"> <em>Under construction</em></h4>
             <hr>
 
             <h6>
@@ -51,21 +51,70 @@
                 <sup>†</sup>Corresponding author &nbsp;
               </p>
             </h6>
+
+            <div class="row justify-content-center" style="margin-bottom:30px;">
+
+              <div class="column">
+                <p class="mb-5">
+                  <a class="btn btn-light" href="https://github.com/wangzivector/OptTac_Manufacture" role="button">
+                     <i class="fa-solid fa-satellite"></i> &nbsp;Hardware
+                  </a>
+                </p>
+              </div>
+
+              <div class="column">
+                <p class="mb-5">
+                  <a class="btn btn-light" href="https://github.com/wangzivector/Manicapture" role="button">
+                     <i class="fa-solid fa-laptop-code"></i> &nbsp;ROS
+                  </a>
+                </p>
+              </div>
+
+              <div class="column">
+                <p class="mb-5">
+                  <a class="btn btn-light" href="https://github.com/wangzivector/Manicapture/tree/main/manicapture/misc" role="button">
+                      <i class="fa-brands fa-hive"></i> &nbsp;Pretrain
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Second row material -->
             <div class="row justify-content-center">
+
               <div class="column">
                 <p class="mb-5">
-                  <a class="btn btn-large btn-light" href="https://github.com/wangzivector/Manicapture" role="button">
-                    <i class="fa fa-file"></i> Project
+                  <a class="btn btn-light" style=" color:#c1e1e6; border-color: #000000;" href="" role="button">
+                    <i class="fa-solid fa-list"></i> &nbsp;<b><ins>BOM</ins></b>
                   </a>
                 </p>
               </div>
+
               <div class="column">
                 <p class="mb-5">
-                  <a class="btn btn-large btn-light" href="https://github.com/wangzivector/Manicapture" role="button">
-                    <i class="fa fa-github-alt"></i> Code
+                  <a class="btn btn-light" style=" color:#c1e1e6; border-color: #000000;" href="" role="button">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> &nbsp;<b><ins>Assembly</ins></b>
                   </a>
                 </p>
               </div>
+
+              <div class="column">
+                <p class="mb-5">
+                  <a class="btn btn-light" style=" color:#c1e1e6; border-color: #000000;" href="" role="button">
+                    <i class="fa-solid fa-hand-sparkles"></i> &nbsp;<b><ins>Calibration</ins></b>
+                  </a>
+                </p>
+              </div>
+
+              <div class="column">
+                <p class="mb-5">
+                  <a class="btn btn-light" style=" color:#f0cfb5; border-color: #000000;" href="" role="button">
+                    <i class="fa-solid fa-hand-sparkles"></i> &nbsp;<b><ins>UMI</ins></b>
+                  </a>
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -78,7 +127,7 @@
       <div class="row">
         <div class="col-12 text-center">
           <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <img src="images/system@3x-80.jpg" alt="OptTac teaser" class="img-responsive graph" width="100%"/>
+            <img src="images/system@3x-80.jpg" alt="OptTac teaser" class="img-responsive graph" width="90%"/>
             <br>
           </div>
 
@@ -132,7 +181,7 @@
           <h2><strong>Developed devices</strong></h2>
           <hr style="margin-top:0px">
 
-          <h4 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>1. Contact-rich universal manipulation interface</b></h4>
+          <h4 style="margin-top:20px; margin-bottom:20px; color:#717980;"><b>1. Contact-rich universal manipulation interface (UMI)</b></h4>
           <div class="row justify-content-center" style="align-items:center; display:flex;">
             <img src="images/opttac_glove.png" alt="OptTac overview" class="img-responsive graph" width="92%"/>
           </div>
@@ -150,7 +199,7 @@
             <b>Robotiq-2F/3F</b>: Owing to the flexible, compact design of OptPads, our tactile sensing kit can immediately endow common robotic manipulators with modality-rich sensation without modifying existing mechanisms. The small sensor thickness also considerably retains the available opening range for robotic manipulation.
           </p>
           <p class="text-justify" style="margin-bottom:10px;" >
-            <b>LEAP Hand</b>: Seamless integration of 4 OptTac onto the intricate 16-degree-of-freedom LEAP Hand. Additional OptPads can be feasibly installed on the finger pads and the palm of the hand, if required.
+            <b>LEAP Hand</b>: Seamless integration of four OptTacs onto the intricate 16-degree-of-freedom LEAP Hand. Additional OptPads can be feasibly installed on the finger pads and the palm of the hand, if required.
           </p>
         </div>
       </div>
